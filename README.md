@@ -13,6 +13,15 @@ A VITS Dataset Generation Tool for Converting Video to Short Audio Based on Damo
 ```bash
 git clone https://github.com/Fatfish588/Dataset_Denerator_For_VITS.git
 ```
+
+创建所需要的目录,windows直接新建文件夹就好了
+```bash
+mkdir ClipVideo/font
+mkdir video_files
+mkdir ClipVideo/output/mp4
+mkdir ClipVideo/output/srt
+mkdir ClipVideo/output/wav
+```
 此时，项目结构应该如下图，以下操作都处于Dataset_Denerator_For_VITS根目录下  
 ![image](https://github.com/Fatfish588/Dataset_Denerator_For_VITS/assets/59791439/5a0d6589-5acf-4251-b308-4dbdc530baf5)
 
@@ -25,6 +34,7 @@ pip install -r ClipVideo/requirments.txt
 # 下载字体（给webUI的字幕镶嵌用的）  
 wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O ClipVideo/font/STHeitiMedium.ttc  
 ```  
+
 3、启动一次webUI，这一步是为了让FunASR-APP自动下载视频转文字的相关模型
 
 ```bash
