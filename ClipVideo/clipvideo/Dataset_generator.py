@@ -1,4 +1,4 @@
-from ClipVideo.clipvideo.videoclipper import VideoClipper
+from videoclipper import VideoClipper
 import os
 from tqdm import tqdm
 import subprocess
