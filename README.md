@@ -23,7 +23,7 @@ mkdir ClipVideo/output/mp4
 mkdir ClipVideo/output/srt
 mkdir ClipVideo/output/wav
 ```
-此时，项目结构应该如下图，以下操作都处于Dataset_Denerator_For_VITS根目录下  
+此时，项目结构应该如下图，以下操作都处于Dataset_Generator_For_VITS根目录下  
 ![image](https://github.com/Fatfish588/Dataset_Denerator_For_VITS/assets/59791439/5a0d6589-5acf-4251-b308-4dbdc530baf5)
 
 2、安装环境依赖
