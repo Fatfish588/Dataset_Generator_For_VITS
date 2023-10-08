@@ -8,7 +8,7 @@ A VITS Dataset Generation Tool for Converting Video to Short Audio Based on Damo
 3、本项目比较简单，所以从输入视频到输出音频数据集是连续的，如果有参数和自己想要的不一样可以自行修改，例如要修改第一条中的偏移量，可在Dataset_generator.py的前半部分修改，默认是不偏移直接截取。  
 
 # 教程
-1、克隆此仓库
+1、克隆此仓库(python版本3.10，3.8往后应该都行)
 
 ```bash
 git clone https://github.com/Fatfish588/Dataset_Denerator_For_VITS.git
