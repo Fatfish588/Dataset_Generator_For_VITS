@@ -31,7 +31,8 @@ mkdir ClipVideo/output/wav
 # install modelscope
 pip install "modelscope[audio_asr]" -f https://modelscope.oss-cn-beijing.aliyuncs.com/releases/repo.html  
 # python environments  
-pip install -r ClipVideo/requirments.txt  
+pip install -r ClipVideo/requirments.txt
+pip install torchaudio 
 # 下载字体（给webUI的字幕镶嵌用的）  
 wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O ClipVideo/font/STHeitiMedium.ttc  
 ```  
