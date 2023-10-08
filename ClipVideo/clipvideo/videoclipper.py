@@ -7,11 +7,9 @@ import argparse
 import numpy as np
 import soundfile as sf
 import moviepy.editor as mpy
-# from modelscope.pipelines import pipeline
-# from modelscope.utils.constant import Tasks
-from .subtitle_utils import generate_srt, generate_srt_clip
-from .trans_utils import pre_proc, proc, write_state, load_state
-from .argparse_tools import ArgumentParser, get_commandline_args
+from subtitle_utils import generate_srt, generate_srt_clip
+from trans_utils import pre_proc, proc, write_state, load_state
+from argparse_tools import ArgumentParser, get_commandline_args
 
 from moviepy.editor import *
 from moviepy.video.tools.subtitles import SubtitlesClip
