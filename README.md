@@ -38,7 +38,7 @@ pip install torchaudio
 wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O ClipVideo/font/STHeitiMedium.ttc  
 ```  
 
-3、启动一次webUI，这一步是为了让FunASR-APP自动下载视频转文字的相关模型
+3、启动一次webUI，这一步是为了让FunASR-APP自动下载视频转文字的相关模型，此步骤下载模型比较耗时，进度条卡住不动是正常情况，稍等就好，模型来自阿里的服务器，可能需要关掉魔法。
 
 ```bash
 python ClipVideo/clipvideo/gradio_service.py
