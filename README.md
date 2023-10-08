@@ -17,14 +17,15 @@ git clone https://github.com/Fatfish588/Dataset_Denerator_For_VITS.git
 创建所需要的目录,windows直接新建文件夹就好了
 ```bash
 mkdir ClipVideo/font
-mkdir video_files
-mkdir ClipVideo/output
-mkdir ClipVideo/output/mp4
-mkdir ClipVideo/output/srt
-mkdir ClipVideo/output/wav
+mkdir ClipVideo/clipvideo/video_files
+mkdir ClipVideo/clipvideo/output
+mkdir ClipVideo/clipvideo/output/mp4
+mkdir ClipVideo/clipvideo/output/srt
+mkdir ClipVideo/clipvideo/output/wav
 ```
 此时，项目结构应该如下图，以下操作都处于Dataset_Generator_For_VITS根目录下  
-![image](https://github.com/Fatfish588/Dataset_Denerator_For_VITS/assets/59791439/5a0d6589-5acf-4251-b308-4dbdc530baf5)
+![image](https://github.com/Fatfish588/Dataset_Generator_For_VITS/assets/59791439/a88c140f-aa65-4ce2-94cd-8af8f5fd58da)   
+
 
 2、安装环境依赖
 ```bash
@@ -50,9 +51,9 @@ python ClipVideo/clipvideo/gradio_service.py
 5、开始运行
 
 ```python
-python Dataset_generator.py  
+python ClipVideo/clipvideo/Dataset_generator.py 
 ```  
-6、运行完成后，结果保存在ClipVideo/output/wav目录下  
+6、运行完成后，结果保存在ClipVideo/clipvideo/output/wav目录下  
 ![image](https://github.com/Fatfish588/Dataset_Denerator_For_VITS/assets/59791439/9f1b63dc-a9e3-4660-9fae-521581a1e998)
 
 # 后续计划
@@ -64,7 +65,7 @@ python Dataset_generator.py
 1、本项目目前只支持中文的、没有背景音乐的视频，后续会添加降噪功能。  
 2、本项目只是将长视频生成几秒钟的短音频数据集，减少了手动切片的时间，并不带标注、重采样、生成训练集的功能。  
 3、本项目生成的文件名字是Paraformer模型听写出来的，只是用作区分文件而已，并不是百分百准确，不推荐直接拿文件名去当训练集。  
-4、若要重新生成，请将根目录下的video_files、ClipVideo/output/mp4、ClipVideo/output/srt、ClipVideo/output/wav这4个目录全部清空，但是保留文件夹本身。  
+4、若要重新生成，请将ClipVideo/clipvideo/目录下的video_files、output/mp4、output/srt、output/wav这4个目录全部清空，但是保留文件夹本身。  
 5、代码超简单的，我甚至每个方法都写了备注。  
 6、关注永雏塔菲喵，关注永雏塔菲谢谢喵。  
 # 相关链接：
