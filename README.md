@@ -18,6 +18,7 @@ git clone https://github.com/Fatfish588/Dataset_Denerator_For_VITS.git
 ```bash
 mkdir ClipVideo/font
 mkdir video_files
+mkdir ClipVideo/output
 mkdir ClipVideo/output/mp4
 mkdir ClipVideo/output/srt
 mkdir ClipVideo/output/wav
