@@ -54,7 +54,8 @@ python ClipVideo/clipvideo/gradio_service.py
 python ClipVideo/clipvideo/Dataset_generator.py 
 ```  
 6、运行完成后，结果保存在ClipVideo/clipvideo/output/wav目录下  
-![image](https://github.com/Fatfish588/Dataset_Denerator_For_VITS/assets/59791439/9f1b63dc-a9e3-4660-9fae-521581a1e998)
+![image](https://github.com/Fatfish588/Dataset_Generator_For_VITS/assets/59791439/ae24892e-7ab2-43ac-9485-46caf28b9df6)  
+
 
 # 后续计划
 1、添加降噪模型，将支持带背景音乐的视频输入。  
