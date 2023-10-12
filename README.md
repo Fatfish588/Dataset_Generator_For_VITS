@@ -19,6 +19,8 @@ git clone https://github.com/Fatfish588/Dataset_Denerator_For_VITS.git
 mkdir ClipVideo/font
 mkdir ClipVideo/clipvideo/video_files
 mkdir ClipVideo/clipvideo/output
+mkdir ClipVideo/clipvideo/input
+mkdir ClipVideo/clipvideo/org_wav
 mkdir ClipVideo/clipvideo/output/mp4
 mkdir ClipVideo/clipvideo/output/srt
 mkdir ClipVideo/clipvideo/output/wav
@@ -34,6 +36,7 @@ pip install "modelscope[audio_asr]" -f https://modelscope.oss-cn-beijing.aliyunc
 # python environments  
 pip install -r ClipVideo/requirments.txt
 pip install torchaudio 
+pip install demucs~=4.0.0
 # 下载字体（给webUI的字幕镶嵌用的）  
 wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O ClipVideo/font/STHeitiMedium.ttc  
 ```  
@@ -50,7 +53,7 @@ python ClipVideo/clipvideo/gradio_service.py
 
 5、开始运行
 
-```python
+```bash
 python ClipVideo/clipvideo/Dataset_generator.py 
 ```  
 6、运行完成后，结果保存在ClipVideo/clipvideo/output/wav目录下  

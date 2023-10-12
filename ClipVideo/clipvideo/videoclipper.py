@@ -26,7 +26,7 @@ class VideoClipper():
         sr, data = audio_input
         assert sr == 16000, "16kHz sample rate required, {} given.".format(sr)
         if len(data.shape) == 2:  # multi-channel wav input
-            logging.warning("Input wav shape: {}, only first channel reserved.").format(data.shape)
+            # logging.warning("Input wav shape: {}, only first channel reserved.").format(data.shape)
             data = data[:,0]
         state['audio_input'] = (sr, data)
         data = data.astype(np.float64)

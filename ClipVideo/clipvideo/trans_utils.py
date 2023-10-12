@@ -37,19 +37,19 @@ def proc(raw_text, timestamp, dest_text):
 
 def write_state(output_dir, state):
     for key in ['/recog_res_raw', '/timestamp', '/sentences']:
-        with open(output_dir+key, 'w') as fout:
+        with open(output_dir+key, 'w', encoding="UTF-8") as fout:
             fout.write(str(state[key[1:]]))
 
 
 def load_state(output_dir):
     state = {}
-    with open(output_dir+'/recog_res_raw') as fin:
+    with open(output_dir+'/recog_res_raw', encoding='UTF-8') as fin:
         line = fin.read()
         state['recog_res_raw'] = line
-    with open(output_dir+'/timestamp') as fin:
+    with open(output_dir+'/timestamp', encoding='UTF-8') as fin:
         line = fin.read()
         state['timestamp'] = eval(line)
-    with open(output_dir+'/sentences') as fin:
+    with open(output_dir+'/sentences', encoding='UTF-8') as fin:
         line = fin.read()
         state['sentences'] = eval(line)
     return state
