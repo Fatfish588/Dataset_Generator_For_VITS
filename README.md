@@ -45,10 +45,15 @@ pip install "modelscope[audio_asr]" -f https://modelscope.oss-cn-beijing.aliyunc
 pip install -r ClipVideo/requirments.txt
 pip install torchaudio 
 pip install demucs~=4.0.0
+pip install umap
+pip install hdbscan  
 # 下载字体（给webUI的字幕镶嵌用的）  
 wget https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ClipVideo/STHeitiMedium.ttc -O ClipVideo/font/STHeitiMedium.ttc  
-```  
-
+```    
+如果想用GPU加速（尤其是降噪）需要对应的torch和cuda，因为大家的显卡各不相同，这里只提供一个我的作为参考：RTX 4090 + cuda11.7  
+```bash
+pip install torch==2.0.1+cu117 torchaudio==2.0.2+cu117 torchvision==0.15.2+cu117  --extra-index-url https://download.pytorch.org/whl/cu117
+```
 3、启动一次webUI，这一步是为了让FunASR-APP自动下载视频转文字的相关模型，此步骤下载模型比较耗时，进度条卡住不动是正常情况，稍等就好，模型来自阿里的服务器，可能需要关掉魔法。  
 
 ```bash
