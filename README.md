@@ -6,6 +6,9 @@ A VITS Dataset Generation Tool for Converting Video to Short Audio Based on Damo
 1、本项目基于阿里达摩院FunASR-APP的ClipVideo简单修改制作，其原理是使用ClipVideo通过文字去一个视频中裁剪出对应的那句话的音视频（美妙的技术），并且可以指定音频的开始和结尾偏移量，在中文方面比whisper效果更好，不会出现尾音最后一个音只有一半的情况。  
 2、本项目的输出都在根目录下ClipVideo/output/中，包含了切割后的音视频和每个视频对应的字幕文件，需要的话可以使用。  
 3、本项目比较简单，所以从输入视频到输出音频数据集是连续的，如果有参数和自己想要的不一样可以自行修改，例如要修改第一条中的偏移量，可在Dataset_generator.py的前半部分修改，默认是不偏移直接截取。  
+  
+下图是效果展示，使用GPU加速的情况下2两分钟生成600句短音频.  
+![7月10日](https://github.com/Fatfish588/Dataset_Generator_For_VITS/assets/59791439/00f57562-798a-4368-921c-6a6886f65d13)
 
 # 更新日志
 2023/10/12  
