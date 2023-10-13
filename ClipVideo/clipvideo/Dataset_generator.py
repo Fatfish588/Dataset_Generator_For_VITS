@@ -108,16 +108,22 @@ def extract_subtitle_text_list_from_srt():
 def clip_audio_from_srt():
     all_srt_text_json, state_json = extract_subtitle_text_list_from_srt()
     print(str(state_json))
+    if len(all_srt_text_json) == 0 or len(state_json) == 0:
+        print("字幕文件为空，请检查音频文件内是否存在语音。")
+        return None
     for wav_file_path in all_srt_text_json:
         for one_line_text in all_srt_text_json[wav_file_path]:
             state = state_json[str(wav_file_path)]
             wav_file_name = OUTPUT_WAV_FILE + str(one_line_text) + '_clip.wav'
-            (sr, audio), message, srt_clip = video_tools.clip(dest_text=str(one_line_text), start_ost=START_OST,
-                                                              end_ost=END_OST,
-                                                              state=state)
-            if "No period found in the speech" not in message:
-                print(f"{one_line_text} in {wav_file_path}")
-                sf.write(wav_file_name, audio, 16000)
+            try:
+                (sr, audio), message, srt_clip = video_tools.clip(dest_text=str(one_line_text), start_ost=START_OST,
+                                                                end_ost=END_OST,
+                                                                state=state)
+                if "No period found in the speech" not in message:
+                    print(f"{one_line_text} in {wav_file_path} 完成")
+                    sf.write(wav_file_name, audio, 16000)
+            except Exception as e:
+                print(f"{one_line_text} in {wav_file_path}切割失败，原因：{e}")
 
 
 # 清空生成物，初始化文件夹
