@@ -1,4 +1,4 @@
-# Dataset_Denerator_For_VITS
+# Dataset_Generator_For_VITS
 基于达摩院视频切割技术的视频转换为短音频的vits数据集生成工具   
 A VITS Dataset Generation Tool for Converting Video to Short Audio Based on Damo Academy Video Cutting Technology  
 
